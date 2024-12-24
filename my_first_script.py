@@ -92,3 +92,36 @@ student.pop("subject")
 print(student)
 print(student.keys())  # Retrieve all the keys stored in the dictionary
 print(student.values()) # Retrieve all the values stored in the dictionary
+
+# Sets Practice Exercises
+# Note: Sets do not allow duplicate values and are unordered(No Specific order or indexing)
+# ADDING ELEMENTS: 
+#    - .add()
+# REMOVING ELEMENTS: .remove() (raises an error if the item is not found)
+#    - .remove() (raises an error if the item is not found)
+#    - .discard() (doesn’t raise an error if the item isn’t found)
+# SET OPERATIONS:
+#    - .union() Combines two sets, keeping only unique items.
+#    - .intersection() Finds common items between two sets.
+#    - .difference() Shows items in one set but not in the other.
+
+# ---------- Adding and Removing Elements ----------
+fruits = {"apple", "banana", "cherry"}
+fruits.add("orange")
+print(fruits)
+fruits.add("banana")  # Sets will not add this because it exists in the set already, no duplicates allowed
+print(fruits)
+fruits.discard("banana")
+print(fruits) # Removing banana from the set alternatively if the item is in the set, using .remove() can also work
+
+# ---------- Union and Intersection ----------
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+print(set_a.union(set_b))  # Combines the two sets and only allow non duplicate items to be added, and stores to a new set
+print(set_a.intersection(set_b)) # Finds the common items, that are duplicates between the two sets and stores to a new set
+
+# ---------- Difference Operation ----------
+set_x = {"cat", "dog", "fish"}
+set_y = {"dog", "bird"}
+print(set_x.difference(set_y)) # Finds the different items, that are non duplicates between the two sets and stores to a new set
+
